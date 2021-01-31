@@ -1,9 +1,10 @@
 package com.nt.sdp;
 
-import com.nt.singltonTest.ForCloning;
+import com.nt.singltonTest.Utility;
 
-public class Printers extends ForCloning {
+public class Printers extends Utility {
 
+	private static final long serialVersionUID = 346L;
 	private static Printers INSTANCE;
 
 	private Printers() {
@@ -27,4 +28,26 @@ public class Printers extends ForCloning {
 		System.out.println(data);
 	}
 
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+
+		throw new CloneNotSupportedException("clone not supported");
+	}
+
+	/*@Override
+	public Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return INSTANCE;
+	}*/
+
+	/*public Object readResolve() {
+		System.out.println("Printers.readResolve()");
+		return INSTANCE;
+	}
+	*/
+
+	public Object readResolve() {
+		System.out.println("Printers.readResolve()");
+		return new IllegalArgumentException("clone not supported exception");
+	}
 }

@@ -13,8 +13,8 @@ public class CloningSingletonTest {
 		p1=Printers.getInstance();
 		
 		try {
-			p2=(Printers) p1.doclone();
-			p3=(Printers) p2.doclone();
+			p2=(Printers) p1.clone();
+			p3=(Printers) p2.clone();
 			System.out.println(p1.hashCode()+" "+p2.hashCode()+" "+p3.hashCode());
 		} catch (CloneNotSupportedException e) {
 			
