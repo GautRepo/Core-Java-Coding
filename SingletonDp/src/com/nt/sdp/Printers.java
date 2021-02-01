@@ -6,9 +6,14 @@ public class Printers extends Utility {
 
 	private static final long serialVersionUID = 346L;
 	private static Printers INSTANCE;
+	private static boolean flag= false;
 
 	private Printers() {
 		System.out.println("Printer.Printer()");
+		if(flag) {
+			throw new IllegalAccessError("Reflection Api not allowed");
+		}
+		flag=true;
 	}
 
 	public static Printers getInstance() {
