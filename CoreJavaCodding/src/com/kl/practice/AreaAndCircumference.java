@@ -12,10 +12,15 @@ public enum AreaAndCircumference {
 		return 2*pi*radius;
 	}
 	
+	public Float getRectAread(float length, float breath) {
+		return length*breath;
+	}
+	
 	public static void main(String[] args) {
 		AreaAndCircumference p=AreaAndCircumference.INSTANCE;
 		System.out.println(p.getArea(7));
 		System.out.println(p.getCircumference(7));
+		System.out.println(p.getRectAread(10, 15));
 	}
 
 }
