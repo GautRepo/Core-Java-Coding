@@ -16,7 +16,6 @@ public class StockBuyAndShell {
 				max=arr[i]-min;
 				
 			}
-			
 		}
 		System.out.println(max);
 		
