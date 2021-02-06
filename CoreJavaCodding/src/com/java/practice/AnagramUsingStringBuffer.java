@@ -14,8 +14,9 @@ public class AnagramUsingStringBuffer {
 		for(char c : ch) {
 			int index=sb.indexOf(String.valueOf(c));
 			
-			if(index>=0)
+			if(index>=0) {
 				flag = true;
+			}
 			else
 				flag = false;
 			
