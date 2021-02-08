@@ -1,7 +1,5 @@
 package com.java.practice;
 
-import java.util.HashSet;
-
 public class DuplicateChar {
 
 	public static void main(String[] args) {
