@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 public class InsertionSort {
 
 	public static void main(String[] args) {
-		Integer[] arr= {12,8,-15,20,4};
+		Integer[] arr= {12,8,-15,20,-24};
 		
 		for(int i=1;i<arr.length;i++ ) {
 			
