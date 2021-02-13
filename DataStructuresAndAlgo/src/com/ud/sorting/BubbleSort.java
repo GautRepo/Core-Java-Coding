@@ -1,4 +1,4 @@
-package com.ud.algo;
+package com.ud.sorting;
 
 import java.util.stream.Stream;
 
