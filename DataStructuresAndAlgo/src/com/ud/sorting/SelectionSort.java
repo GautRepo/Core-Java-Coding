@@ -6,32 +6,20 @@ public class SelectionSort {
 
 	public static void main(String[] args) {
 		Integer[] arr= {12,8,-15,20,4};
-		
-		for(int i= arr.length-1;i>0;i--) {
-			int largest =0;
-			for(int j=0;j<=i;j++) {
-				if(arr[largest]<arr[j]) {
-					largest=j;
+		int min, temp;
+		for(int i=0;i<arr.length;i++) {
+			min =i;
+			for(int j=i+1;j<arr.length;j++) {
+				if(arr[j]<arr[min]) {
+					min = j;
 				}
 			}
-			swap(arr,largest,i);
-		}
-		
-		Stream<Integer> stream = Stream.of(arr);
-		stream.forEach(System.out::println);
-
-	}
-
-	public static void swap(Integer[] arr, int largest, int i) {
-		if(largest==i) {
-			return;
-		}
-		if(arr[largest]>arr[i]) {
-			int temp=arr[largest];
-			arr[largest]=arr[i];
+			temp = arr[min];
+			arr[min]=arr[i];
 			arr[i]=temp;
 		}
-		
+		Stream<Integer> stm = Stream.of(arr);
+		stm.forEach(s->System.out.print(s+" "));
 	}
 
 }
