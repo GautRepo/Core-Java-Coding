@@ -27,12 +27,7 @@ public class Printers extends Utility {
 		return INSTANCE;
 	}
 
-	// b.Method
-
-	public void priterData(String data) {
-		System.out.println(data);
-	}
-
+	
 	@Override
 	public Object clone() throws CloneNotSupportedException {
 
@@ -55,4 +50,10 @@ public class Printers extends Utility {
 		System.out.println("Printers.readResolve()");
 		return new IllegalArgumentException("clone not supported exception");
 	}
+	// b.Method
+
+		public void priterData(String data) {
+			System.out.println(data);
+		}
+
 }

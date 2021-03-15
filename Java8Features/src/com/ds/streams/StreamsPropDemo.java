@@ -1,6 +1,7 @@
 package com.ds.streams;
 
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -63,6 +64,7 @@ public class StreamsPropDemo {
 		 Stream<Integer> istr = Stream.of(iarr);
 		 istr.forEach(System.out::println);
 		 
+		
 
 	}
 
